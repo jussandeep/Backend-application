@@ -27,6 +27,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'DockerHubID', variable: 'DockerDubPwd')]) {
+                        sh 'docker login -u jsandeep9866 -p ${DockerDubPwd}'
+                        sh 'docker push jsandeep9866/backend-application:latest'
     
                    }
                     
