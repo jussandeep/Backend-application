@@ -1,5 +1,4 @@
-FROM openjdk:17-jdk-slim
-
+FROM openjdk:17-slim
 EXPOSE 8080
 
 ADD target/Backend-Application.jar Backend-Application.jar
