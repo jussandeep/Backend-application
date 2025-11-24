@@ -23,6 +23,17 @@ pipeline {
                 }
             }
         }
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    withCredentials([string(credentialsId: 'DockerHubID', variable: 'DockerDubPwd')]) {
+    
+                   }
+                    
+                }
+            }
+        }
+        
     }
     
     
