@@ -48,6 +48,7 @@ spec:
     - metadata:
         name: mongo-data
       spec:
+        storageClassName: gp2
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
