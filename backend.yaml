@@ -16,11 +16,7 @@ spec:
         - name: backend
           image: jsandeep9866/backend-application:latest
           ports:
-            - containerPort: 8080
-              valueFrom:
-                secretKeyRef:
-                  name: mongodb-secret
-                  key: MONGO_DB
+            - containerPort: 8080   
           env:
             - name: SPRING_DATA_MONGODB_HOST
               value: mongodb
@@ -45,8 +41,6 @@ spec:
                 secretKeyRef:
                   name: mongodb-secret
                   key: MONGO_PASSWORD
-
-
 ---
 apiVersion: v1
 kind: Service
